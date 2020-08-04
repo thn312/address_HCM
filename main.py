@@ -7,42 +7,43 @@ import re
 addrList = []
 with open('diachi.csv', newline='', encoding='utf-8') as csvFile:
     csvList = csv.reader(csvFile, delimiter=',')
-    count = 0
+    
     for row in csvList:
         # print("{0}. {1}".format(str(count),''.join(row)))
-        if count > 0:
             addrList.append(','.join(row))
-        count += 1
+       
 
 # remove accent from string
 addrLisccent = []
-count = 0
+
 for item in addrList:
     item = library.remove_accent(item)
     addrLisccent.append([item])
     # print("{0}. {1}".format(str(count), addrLisccent[len(addrLisccent)-1][0]))
-    count += 1
+    
 
 # Parsing
 addrListAccent = []
-count = 0
+
 for item in addrList:
     addrListAccent.append([item])
-    count += 1
+    
 
+# print(addrListAccent)
 # combine list
 
 for i in range(0, len(addrLisccent)):
 
-    # districtIndex = library.detect_district_index(addrLisccent[i][0])
-    # wardIndex = library.detect_ward_index(addrLisccent[i][0])
-    streetIndex = library.detect_street_index(addrLisccent[i][0])
+    # districtIndex = library.detect_district_index(addrLisccent[i][0].lower())
+    # wardIndex = library.detect_ward_index(addrLisccent[i][0].lower())
+    # streetIndex = library.detect_street_index(addrLisccent[i][0].lower())
 
     district = library.detect_district(addrLisccent[i][0])
     ward = library.detect_ward(addrLisccent[i][0])
-    street = library.detect_street(addrLisccent[i][0])
-    num = library.detect_num(addrListAccent[i][0], streetIndex)
-    
+    street = library.detect_street(addrLisccent[i][0])[0]
+    streetccent = library.detect_street(addrLisccent[i][0])[1]
+    num = library.detect_num(addrListAccent[i][0], addrLisccent[i][0].lower(), streetccent.lower())
+
     if district != "":
         addrListAccent[i].append(district)
     else:
@@ -71,3 +72,5 @@ with open('test_out.csv', 'wb') as csvFile:
         # print(addrLisccent[i])
         # wr.writerow("\"" + addrListAccent[i][0] + "\",\"" + addrListAccent[i][1] + "\",\"" + addrListAccent[i][2] + "\"")
         wr.writerow((str(addrListAccent[i][4]),str(addrListAccent[i][3]), str(addrListAccent[i][2]), str(addrListAccent[i][1]), str("Hồ Chí Minh")))
+
+print("oke")
