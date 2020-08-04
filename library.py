@@ -600,8 +600,9 @@ wardListHCM = [["Tan Dinh","Phường Tân Định"],
 ["Binh Chieu", "Phường Bình Chiểu"],
 ["Linh Trung","Phường Linh Trung"],
 ["Tam Binh","Phường Tam Bình"],
-["Tam Phu","Phường Tam Phú"],["phuong Hiep Binh Phuoc","Phường Hiệp Bình Phước"],
-["Hiep Binh Phuoc","Phường Hiệp Bình Phước"],
+["Tam Phu","Phường Tam Phú"],
+["phuong Hiep Binh Phuoc","Phường Hiệp Bình Phước"],
+[" Hiep Binh Phuoc","Phường Hiệp Bình Phước"],
 ["Hiep Binh Chanh","Phường Hiệp Bình Chánh"],
 ["Linh Chieu", "Phường Linh Chiểu"],
 ["Linh Tay", "Phường Linh Tây"],
@@ -2508,7 +2509,6 @@ streetListHCM = [
 ["duong G8","Đường G8"],
 ["duong so 1B","Đường số 1B"],
 ["duong so 5C","Đường số 5C"],
-["Hiep Binh","Hiệp Bình"],
 ["A Trung Nhi","A Trưng Nhị"],
 ["Kha Van Can","Kha Vạn Cân"],
 ["trung tam thuong mai Binh Dien","Trung tâm thương mại Bình Điền"],
@@ -2519,7 +2519,6 @@ streetListHCM = [
 ["Phu Chau","Phú Châu"],
 ["Chuong Duong","Chương Dương"],
 ["To Vinh Dien","Tô Vĩnh Diện"],
-["Binh Phu","Bình Phú"],
 ["Duong Van Cam","Dương Văn Cam"],
 ["Ly Te Xuyen","Lý Tế Xuyên"],
 ["Nga 5 Thu Duc","Ngã 5 Thủ Đức"],
@@ -2851,7 +2850,9 @@ streetListHCM = [
 ["Hung Gia 3","Hưng Gia 3"],
 ["Hung Gia 4","Hưng Gia 4"],
 ["Ben Nghe","Bến Nghé"],
-["Nha Be","Thị trấn Nhà Bè"]
+["Nha Be","Thị trấn Nhà Bè"],
+["Hiep Binh","Hiệp Bình"],
+["Binh Phu","Bình Phú"]
 ]
 
 
